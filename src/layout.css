@@ -1,0 +1,115 @@
+:root{
+    --lightModeBackground: wheat;
+    --lightModeText: black;
+    --lightModeContent: antiquewhite;
+    --lightModeUnderline: brown;
+
+    --darkModeBackground: black;
+    --darkModeText: white;
+    --darkModeContent: #1a1a1a;
+    --darkModeUnderline: #4d4d4d;
+}
+
+body{
+    margin: 0;
+    background-color: var(--lightModeBackground);
+    display: flex;
+    flex-wrap: wrap;
+    /*Switching from light to dark mode transition*/
+    transition: 0.5s;
+}
+h1, h2{
+    font-family: 'Diablo', sans-serif;
+}
+h1{
+    border-bottom: var(--lightModeUnderline) 1px solid;
+}
+.panel ul, .panel li{
+    list-style-type: none;
+    padding-right: 2rem;
+    padding-bottom: 10%;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.homeLink{
+    cursor: pointer;
+}
+
+.colorTheme, img{
+    transition: 0.5s;
+}
+.colorTheme, img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.head{
+    /*put above all page content*/
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px 20px;
+}
+.head > *{
+    margin: 0 10px;
+}
+
+.panel{
+    font-size: small;
+    width: 15%;
+    height: 100%;
+    padding-bottom: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.content{
+    width: 65%;
+    padding-right: 10rem;
+    /*Switching from light to dark mode transition*/
+    transition: 0.5s;
+    /*fill right side of screen with content*/
+    flex: 1 1 auto;
+    flex-shrink: inherit;
+    padding-left: 2rem;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: var(--lightModeContent);
+}
+
+.footer{
+    /*put below all page content*/
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**************************************
+* ANCHOR Hide side navigation on mobile
+***************************************/
+@media only screen and (max-width: 1000px) {
+    .panel{
+        display: none;
+    }
+    .content{
+        padding-right: 0;
+        padding-left: 1rem;
+        padding-bottom: 100vh;
+        font-size: 65%;
+        border-radius: 0;
+    }
+}
