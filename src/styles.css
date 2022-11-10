@@ -17,6 +17,9 @@ body{
     padding: 20px 20px;
 
 }
+.head > *{
+    margin: 0 10px;
+}
 
 .panel{
     width: 15%;
