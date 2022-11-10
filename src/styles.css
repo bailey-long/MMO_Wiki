@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    background-color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.head{
+    /*put above al page content*/
+    margin-bottom: 2rem;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.panel{
+    margin-right: 5rem;
+    width: 15%;
+    height: 100%;
+    padding-bottom: 100%;
+    border-right: brown 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.content{
+
+}
+
+.footer{
+    /*put below all page content*/
+    margin-top: 2rem;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1{
+    border-bottom: brown 1px solid;
+}
