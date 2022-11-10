@@ -28,6 +28,7 @@ img:hover{
 }
 
 .panel{
+    font-size: small;
     width: 15%;
     height: 100%;
     padding-bottom: 100%;
@@ -41,6 +42,8 @@ img:hover{
     /*fill right side of screen with content*/
     flex: 1 1 auto;
     padding-left: 2rem;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
     background-color: antiquewhite;
 }
 
@@ -62,4 +65,10 @@ li{
     list-style-type: none;
     padding-right: 2rem;
     padding-bottom: 10%;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
