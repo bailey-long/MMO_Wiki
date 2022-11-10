@@ -4,12 +4,19 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+img{
+    transition: 0.5s;
+}
+img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 .head{
     /*put above all page content*/
     top: 0;
     width: 100%;
-    height: 20px;
+    height: 50px;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -21,7 +28,7 @@ body{
 }
 
 .panel{
-    width: 10%;
+    width: 15%;
     height: 100%;
     padding-bottom: 100%;
     display: flex;
@@ -29,16 +36,10 @@ body{
     justify-content: left;
     align-items: center;
 }
-.panel, li{
-    list-style-type: none;
-    margin-bottom: 10px;
-    margin-right: 25px;
-}
 
 .content{
     /*fill right side of screen with content*/
     flex: 1 1 auto;
-    border-radius: 5px;
     padding-left: 2rem;
     background-color: antiquewhite;
 }
@@ -49,12 +50,16 @@ body{
     width: 100%;
     height: 100px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
 
 h1{
-    border-bottom: 1px solid;
-    border-color: brown;
+    border-bottom: brown 1px solid;
+}
+li{
+    list-style-type: none;
+    padding-right: 2rem;
+    padding-bottom: 10%;
 }
