@@ -21,9 +21,12 @@ body{
 h1, h2, h3{
     font-family: 'Diablo', sans-serif;
 }
-h1{
+h1, h2{
     user-select: none;
     border-bottom: var(--underline) 1px solid;
+}
+ul{
+    list-style-type: none;
 }
 .panel ul, .panel li{
     list-style-type: none;
@@ -77,7 +80,7 @@ a:hover{
 
 .content{
     width: 65%;
-    padding-right: 10rem;
+    padding-right: 1rem;
     /*Switching from light to dark mode transition*/
     transition: 0.5s;
     /*fill right side of screen with content*/
@@ -103,7 +106,7 @@ a:hover{
 /**************************************
 * ANCHOR Hide side navigation on mobile
 ***************************************/
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width:1000px) {
     .panel{
         display: none;
     }
