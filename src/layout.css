@@ -1,27 +1,24 @@
 :root{
+    /*Changes with theme*/
     --underline: brown;
-
-    --lightModeBackground: wheat;
-    --lightModeText: black;
-    --lightModeContent: antiquewhite;
-
-    --darkModeBackground: black;
-    --darkModeText: white;
-    --darkModeContent: #1a1a1a;
+    --contentBackground: antiquewhite;
+    --exteriorBackground: wheat;
+    --textColor: black;
 }
 
 body{
     margin: 0;
-    background-color: var(--lightModeBackground);
+    background-color: var(--exteriorBackground);
     display: flex;
     flex-wrap: wrap;
     /*Switching from light to dark mode transition*/
     transition: 0.5s;
 }
 h1, h2, h3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-family: 'Diablo', sans-serif;
-}
-h1, h2{
     user-select: none;
     border-bottom: var(--underline) 1px solid;
 }
@@ -44,10 +41,10 @@ a:hover{
     cursor: pointer;
 }
 
-.colorTheme, img{ 
+.head img{ 
     transition: 0.5s;
 }
-.colorTheme, img:hover{
+.head img:hover{
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -89,7 +86,7 @@ a:hover{
     padding-left: 2rem;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
-    background-color: var(--lightModeContent);
+    background-color: var(--contentBackground);
 }
 
 .footer{

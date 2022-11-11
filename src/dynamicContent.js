@@ -14,45 +14,45 @@
      <li>
          <ul id="navigation">
              <h2>Navigation</h2>
-             <li><a href="/src/index/index.html">Home</a></li>
-             <li><a href="/src/skills/Overview/index.html">Skills</a></li>
-             <li><a href="/src/skills/Combat/combat.html">Combat</a></li>
-             <li><a href="/src/skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="/src/Quests/Overview/index.html">Questing</a></li>
-             <li><a href="/src/skills/Professions/professions.html">Professions</a></li>
-             <li><a href="/src/skills/Other/other.html">Other</a></li>
+             <li><a href="/index/index.html">Home</a></li>
+             <li><a href="/skills/Overview/index.html">Skills</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/Quests/Overview/index.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>
  
      <li>
          <ul id="recentChanges">
              <h2>Recent Changes</h2>
-             <li><a href="/src/skills/Combat/combat.html">Combat</a></li>
-             <li><a href="/src/skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="/src/skills/Questing/questing.html">Questing</a></li>
-             <li><a href="/src/skills/Professions/professions.html">Professions</a></li>
-             <li><a href="/src/skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/skills/Questing/questing.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>   
      <li> 
          <ul id="guides">
              <h2>Guides</h2>
-             <li><a href="/src/skills/Combat/combat.html">Combat</a></li>
-             <li><a href="/src/skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="/src/skills/Questing/questing.html">Questing</a></li>
-             <li><a href="/src/skills/Professions/professions.html">Professions</a></li>
-             <li><a href="/src/skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/skills/Questing/questing.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>
  
      <li>
          <ul id="community">
              <h2>Community</h2>
-             <li><a href="/src/skills/Combat/combat.html">Combat</a></li>
-             <li><a href="/src/skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="/src/skills/Questing/questing.html">Questing</a></li>
-             <li><a href="/src/skills/Professions/professions.html">Professions</a></li>
-             <li><a href="/src/skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/skills/Questing/questing.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>
  </ul>`;
@@ -62,7 +62,8 @@
   *******************************************************/
  document.getElementsByClassName("footer")[0].innerHTML =
  `<h1 class="homeLink">MMO</h1>
- <span>Website and MMO by Bailey Long</span> <br>
+ <span>Website and MMO by <a href="https://bailey-long.github.io/src/index/" target="blank">Bailey Long</a></span>
+ <span>Skill icon art by <a href="https://dtownshend.com/" target="blank">Dom Townshend</a></span>
  <span><a target="_blank" href="https://icons8.com/icon/102913/summer">Summer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
  <span><a target="_blank" href="https://icons8.com/icon/102914/night">Night</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
  <span><br></span>`;
@@ -89,6 +90,8 @@ var darkIMG = document.createElement("img");
 darkIMG.src= "/src/Content/darkMode.png"
 darkIMG.id = "darkMode";
 darkIMG.class = "colorTheme";
+darkIMG.alt = "Theme Switcher";
+darkIMG.tabIndex = "0";
 darkIMG.style.width = "30px";
 document.getElementsByClassName("head")[0].appendChild(darkIMG);
 
@@ -113,8 +116,8 @@ document.getElementById("darkMode").addEventListener("click", function(){
             a.style.color = "lightgrey";
         });
 
-        document.body.style.backgroundColor = "#303141";
-        document.getElementsByClassName("content")[0].style.backgroundColor = "#596e96";
+        document.documentElement.style.setProperty('--exteriorBackground', '#303141');
+        document.documentElement.style.setProperty('--contentBackground', '#596e96');
         document.documentElement.style.setProperty('--underline', 'red');
         document.body.style.color = "white";
         
@@ -135,8 +138,8 @@ document.getElementById("darkMode").addEventListener("click", function(){
             a.style.color = "purple";
         });
 
-        document.body.style.backgroundColor = "wheat";
-        document.getElementsByClassName("content")[0].style.backgroundColor = "antiquewhite";
+        document.documentElement.style.setProperty('--exteriorBackground', 'wheat');
+        document.documentElement.style.setProperty('--contentBackground', 'antiquewhite');
         document.documentElement.style.setProperty('--underline', 'brown');
         document.body.style.color = "black";
     }   
