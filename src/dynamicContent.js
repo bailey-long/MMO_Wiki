@@ -87,7 +87,7 @@ document.getElementsByTagName("head")[0].innerHTML +=
 *   ANCHOR Append color theme switcher to pages
 ************************************************************/
 var darkIMG = document.createElement("img");
-darkIMG.src= "/src/Content/darkMode.png"
+darkIMG.src= "/Content/darkMode.png"
 darkIMG.id = "darkMode";
 darkIMG.class = "colorTheme";
 darkIMG.alt = "Theme Switcher";
@@ -105,7 +105,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
         *   Change to light mode
         ************************************************************/
 
-        document.getElementById("darkMode").src = "/src/Content/lightMode.png";
+        document.getElementById("darkMode").src = "/Content/lightMode.png";
         //set theme selector to lightMode for next click
         document.getElementById("darkMode").id = "lightMode";
         //set cookie to lightMode
@@ -127,7 +127,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
         *   Change to dark mode
         ************************************************************/
 
-        document.getElementById("lightMode").src = "/src/Content/darkMode.png";
+        document.getElementById("lightMode").src = "/Content/darkMode.png";
         //set theme selector to darkMode for next click
         document.getElementById("lightMode").id = "darkMode";
         //set cookie to darkMode
