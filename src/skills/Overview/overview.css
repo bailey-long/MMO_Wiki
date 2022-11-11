@@ -1,0 +1,9 @@
+ul{
+    list-style-type: none;
+}
+h3{
+    border-bottom: var(--underline) 1px solid;
+}
+h4{
+    padding-left: 1rem;
+}

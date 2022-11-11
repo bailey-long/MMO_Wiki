@@ -1,13 +1,13 @@
 :root{
+    --underline: brown;
+
     --lightModeBackground: wheat;
     --lightModeText: black;
     --lightModeContent: antiquewhite;
-    --lightModeUnderline: brown;
 
     --darkModeBackground: black;
     --darkModeText: white;
     --darkModeContent: #1a1a1a;
-    --darkModeUnderline: #4d4d4d;
 }
 
 body{
@@ -18,11 +18,12 @@ body{
     /*Switching from light to dark mode transition*/
     transition: 0.5s;
 }
-h1, h2{
+h1, h2, h3{
     font-family: 'Diablo', sans-serif;
 }
 h1{
-    border-bottom: var(--lightModeUnderline) 1px solid;
+    user-select: none;
+    border-bottom: var(--underline) 1px solid;
 }
 .panel ul, .panel li{
     list-style-type: none;
@@ -40,7 +41,7 @@ a:hover{
     cursor: pointer;
 }
 
-.colorTheme, img{
+.colorTheme, img{ 
     transition: 0.5s;
 }
 .colorTheme, img:hover{
@@ -67,6 +68,7 @@ a:hover{
     width: 15%;
     height: 100%;
     padding-bottom: 100%;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: left;
