@@ -65,7 +65,7 @@
  <span>Website and MMO by <a href="https://bailey-long.github.io/src/index/" target="blank">Bailey Long</a></span>
  <span>Skill icon art by <a href="https://dtownshend.com/" target="blank">Dom Townshend</a></span>
  <span><a target="_blank" href="https://icons8.com/icon/102913/summer">Summer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
- <span><a target="_blank" href="https://icons8.com/icon/102914/night">Night</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
+ <span><a target="_blank" href="https://icons8.com/icon/59841/moon-symbol">Moon Symbol</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
  <span><br></span>`;
 
 /***********************************************************
