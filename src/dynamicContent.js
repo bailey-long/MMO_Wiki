@@ -69,7 +69,7 @@
  <span><br></span>`;
 
 /***********************************************************
- * ANCHOR add click event listener to headers for navigation
+ * ANCHOR add click event listener to logos for navigation
  **********************************************************/
  document.querySelectorAll('.homeLink').forEach(item => {
     item.addEventListener('click', event => {
@@ -78,14 +78,25 @@
   });
 
 /************************************************************
- * ANCHOR add fonts to head
+ * ANCHOR add content to head
  ************************************************************/
-document.getElementsByTagName("head")[0].innerHTML += 
-`<link href="https://fonts.cdnfonts.com/css/diablo" rel="stylesheet">`
+document.getElementsByTagName("head")[0].innerHTML = 
+`<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PB77QTDM8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-PB77QTDM8B');
+</script>
+<!-- Header font -->
+<link href="https://fonts.cdnfonts.com/css/diablo" rel="stylesheet">` + 
+document.getElementsByTagName("head")[0].innerHTML;
 /************************************************************
 *   ANCHOR Append color theme switcher to pages
 ************************************************************/
+ /*image attributes*/ {
 var darkIMG = document.createElement("img");
 darkIMG.src= "/Content/darkMode.png"
 darkIMG.id = "darkMode";
@@ -93,6 +104,7 @@ darkIMG.class = "colorTheme";
 darkIMG.alt = "Theme Switcher";
 darkIMG.tabIndex = "0";
 darkIMG.style.width = "30px";
+};
 document.getElementsByClassName("head")[0].appendChild(darkIMG);
 
 /************************************************************
@@ -102,7 +114,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
     if(darkIMG.id == "darkMode"){
 
         /************************************************************
-        *   Change to light mode
+        *   Change to dark mode
         ************************************************************/
 
         document.getElementById("darkMode").src = "/Content/lightMode.png";
@@ -111,20 +123,18 @@ document.getElementById("darkMode").addEventListener("click", function(){
         //set cookie to lightMode
         document.cookie = "lightMode";
 
-        /*Make clicked links fit the color theme*/
-        document.querySelectorAll("a").forEach(function(a){
-            a.style.color = "lightgrey";
-        });
-
         document.documentElement.style.setProperty('--exteriorBackground', '#303141');
         document.documentElement.style.setProperty('--contentBackground', '#596e96');
         document.documentElement.style.setProperty('--underline', 'red');
+        document.documentElement.style.setProperty('--linkColor', 'lightblue');
+        document.documentElement.style.setProperty('--visitedLinkColor', 'lightgrey');
+        /*Body text color*/
         document.body.style.color = "white";
         
     } else {
 
         /************************************************************
-        *   Change to dark mode
+        *   Change to light mode
         ************************************************************/
 
         document.getElementById("lightMode").src = "/Content/darkMode.png";
@@ -132,15 +142,13 @@ document.getElementById("darkMode").addEventListener("click", function(){
         document.getElementById("lightMode").id = "darkMode";
         //set cookie to darkMode
         document.cookie = "darkMode";
-        
-        /*Make clicked links fit the color theme*/
-        document.querySelectorAll("a").forEach(function(a){
-            a.style.color = "purple";
-        });
 
         document.documentElement.style.setProperty('--exteriorBackground', 'wheat');
         document.documentElement.style.setProperty('--contentBackground', 'antiquewhite');
         document.documentElement.style.setProperty('--underline', 'brown');
+        document.documentElement.style.setProperty('--linkColor', 'blue');
+        document.documentElement.style.setProperty('--visitedLinkColor', 'purple');
+        /*Body text color*/
         document.body.style.color = "black";
     }   
 });

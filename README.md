@@ -12,8 +12,8 @@ directory it is in.
 
 ### Commands
 
-firebase emulators:start
+#### firebase emulators:start
 Runs live server to test changes on, gives port to open in browser through console.
 
-firebase deploy
+#### firebase deploy
 deploys site on firebase hosting

@@ -4,6 +4,8 @@
     --contentBackground: antiquewhite;
     --exteriorBackground: wheat;
     --textColor: black;
+    --linkColor: blue;
+    --visitedLinkColor: purple;
 }
 
 body{
@@ -35,6 +37,15 @@ a{
 }
 a:hover{
     text-decoration: underline;
+}
+a:visited{
+    color: var(--visitedLinkColor);
+}
+#listContainer a{
+    color: var(--linkColor);
+}
+#listContainer a:visited{
+    color: var(--linkColor);
 }
 
 .homeLink{
