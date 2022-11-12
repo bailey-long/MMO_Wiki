@@ -6,6 +6,7 @@
     --textColor: black;
     --linkColor: blue;
     --visitedLinkColor: purple;
+    --footPanelLinkColor: blue;
 }
 
 body{
@@ -27,25 +28,22 @@ h1, h2, h3{
 ul{
     list-style-type: none;
 }
-.panel ul, .panel li{
-    list-style-type: none;
-    padding-right: 2rem;
-    padding-bottom: 10%;
-}
+
 a{
     text-decoration: none;
+    color: var(--linkColor);
 }
 a:hover{
     text-decoration: underline;
 }
 a:visited{
-    color: var(--visitedLinkColor);
+    color: var(--visitedLinkColor)
 }
-#listContainer a{
-    color: var(--linkColor);
+#listContainer a, .footer a{
+    color: var(--footPanelLinkColor);
 }
-#listContainer a:visited{
-    color: var(--linkColor);
+#listContainer a:visited, .footer a:visited{
+    color: var(--footPanelLinkColor);
 }
 
 .homeLink{
@@ -76,7 +74,7 @@ a:visited{
 
 .panel{
     font-size: small;
-    width: 15%;
+    width: 10%;
     height: 100%;
     padding-bottom: 100%;
     margin-left: 10px;
@@ -84,6 +82,11 @@ a:visited{
     flex-direction: column;
     justify-content: left;
     align-items: center;
+}
+.panel ul, .panel li{
+    list-style-type: none;
+    padding-right: 2rem;
+    padding-bottom: 10%;
 }
 
 .content{
@@ -99,6 +102,9 @@ a:visited{
     border-top-left-radius: 5px;
     background-color: var(--contentBackground);
 }
+.dropDown{
+    padding-left: 0;
+}
 
 .footer{
     /*put below all page content*/
@@ -106,6 +112,8 @@ a:visited{
     width: 100%;
     height: 100px;
     padding: 0 20px;
+    font-weight: bold;
+    margin-bottom: 7rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,15 +122,107 @@ a:visited{
 /**************************************
 * ANCHOR Hide side navigation on mobile
 ***************************************/
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1500px) {
     .panel{
-        display: none;
+        width: 14%;
     }
     .content{
+        width: 40%;
         padding-right: 0;
         padding-left: 1rem;
         padding-bottom: 100vh;
         font-size: 90%;
-        border-radius: 0;
+        flex-shrink: inherit;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .panel{
+        width: 18%;
+    }
+    .content{
+        width: 20%;
+        padding-right: 0;
+        padding-bottom: 100vh;
+        font-size: 90%;
+        flex-shrink: inherit;
+    }
+}
+@media only screen and (max-width:780px) {
+    .panel{
+        width: 20%;
+    }
+    .content{
+        padding-right: 0;
+        padding-bottom: 100vh;
+        font-size: 90%;
+        flex-shrink: inherit;
+    }
+    #skills{
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width:720px) {
+    .panel{
+        width: 25%;
+    }
+    .content{
+        padding-right: 0;
+        padding-bottom: 100vh;
+        font-size: 90%;
+        flex-shrink: inherit;
+    }
+    #skills{
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width:600px) {
+    .panel{
+        width: 20%;
+    }
+    .content{
+        padding-right: 0;
+        padding-bottom: 100vh;
+        font-size: 90%;
+        flex-shrink: inherit;
+    }
+    #skills{
+        padding-left: 0;
+    }
+    .panel h1,h2{
+        font-size: 98%;
+    }
+}
+@media only screen and (max-width:500px) {
+    .panel{
+        width: 25%;
+    }
+    .content{
+        padding-right: 0;
+        padding-bottom: 100vh;
+        font-size: 80%;
+        flex-shrink: inherit;
+    }
+    #skills{
+        padding-left: 0;
+    }
+    .panel h1,h2{
+        font-size: 98%;
+    }
+}
+@media only screen and (max-width:400px) {
+    .panel{
+        width: 30%;
+    }
+    .content{
+        padding-right: 0;
+        padding-bottom: 100vh;
+        font-size: 70%;
+        flex-shrink: inherit;
+    }
+    #skills{
+        padding-left: 0;
+    }
+    .panel h1,h2{
+        font-size: 98%;
     }
 }

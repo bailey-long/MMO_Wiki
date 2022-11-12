@@ -66,7 +66,8 @@
  <span>Skill icon art by <a href="https://dtownshend.com/" target="blank">Dom Townshend</a></span>
  <span><a target="_blank" href="https://icons8.com/icon/102913/summer">Summer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
  <span><a target="_blank" href="https://icons8.com/icon/59841/moon-symbol">Moon Symbol</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
- <span><br></span>`;
+ <span>--------------</span>
+ <span><a href="#top" class="backToTop">Back to top</a></span>`;
 
 /***********************************************************
  * ANCHOR add click event listener to logos for navigation
@@ -126,8 +127,9 @@ document.getElementById("darkMode").addEventListener("click", function(){
         document.documentElement.style.setProperty('--exteriorBackground', '#303141');
         document.documentElement.style.setProperty('--contentBackground', '#596e96');
         document.documentElement.style.setProperty('--underline', 'red');
-        document.documentElement.style.setProperty('--linkColor', 'lightblue');
-        document.documentElement.style.setProperty('--visitedLinkColor', 'lightgrey');
+        document.documentElement.style.setProperty('--linkColor', 'blue');
+        document.documentElement.style.setProperty('--visitedLinkColor', '#292963');
+        document.documentElement.style.setProperty('--footPanelLinkColor', 'steelblue');
         /*Body text color*/
         document.body.style.color = "white";
         
@@ -148,6 +150,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
         document.documentElement.style.setProperty('--underline', 'brown');
         document.documentElement.style.setProperty('--linkColor', 'blue');
         document.documentElement.style.setProperty('--visitedLinkColor', 'purple');
+        document.documentElement.style.setProperty('--footPanelLinkColor', 'blue');
         /*Body text color*/
         document.body.style.color = "black";
     }   
