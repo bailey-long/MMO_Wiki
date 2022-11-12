@@ -7,7 +7,7 @@ I intend on completely designing the alpha version of an MMO game using this web
 ## Notes for myself
 
 ### Links
-Firebase handles <a> href links differently, instead of pointing from where the file is, it instead points directly from the directory, meaning every link to index.html will be the same no katter which
+Firebase handles href links differently, instead of pointing from where the file is, it instead points directly from the directory, meaning every link to index.html will be the same no matter which
 directory it is in.
 
 ### Commands
