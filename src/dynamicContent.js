@@ -97,22 +97,25 @@ document.getElementsByTagName("head")[0].innerHTML;
 /************************************************************
 *   ANCHOR Append color theme switcher to pages
 ************************************************************/
- /*image attributes*/ {
-var darkIMG = document.createElement("img");
-darkIMG.src= "/Content/darkMode.png"
-darkIMG.id = "darkMode";
-darkIMG.class = "colorTheme";
-darkIMG.alt = "Theme Switcher";
-darkIMG.tabIndex = "0";
-darkIMG.style.width = "30px";
-};
-document.getElementsByClassName("head")[0].appendChild(darkIMG);
+var themeIMG = document.createElement("img");
+themeIMG.class = "colorTheme";
+themeIMG.alt = "Theme Switcher";
+themeIMG.tabIndex = "0";
+themeIMG.style.width = "30px";
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    themeIMG.src= "/Content/lightMode.png"
+    themeIMG.id = "lightMode";
+} else {
+    themeIMG.src= "/Content/darkMode.png"
+    themeIMG.id = "darkMode";
+}
+document.getElementsByClassName("head")[0].appendChild(themeIMG);
 
 /************************************************************
 *   ANCHOR Change between light and dark mode
 ************************************************************/
-document.getElementById("darkMode").addEventListener("click", function(){
-    if(darkIMG.id == "darkMode"){
+themeIMG.addEventListener("click", function(){
+    if(themeIMG.id == "darkMode"){
 
         /************************************************************
         *   Change to dark mode
