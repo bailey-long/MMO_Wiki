@@ -14,44 +14,44 @@
      <li>
          <ul id="navigation">
              <h2>Navigation</h2>
-             <li><a href="/src/skills/Overview/index.html">Skills</a></li>
-             <li><a href="/src/skills/Combat/combat.html">Combat</a></li>
-             <li><a href="/src/skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="/src/Quests/Overview/index.html">Questing</a></li>
-             <li><a href="/src/skills/Professions/professions.html">Professions</a></li>
-             <li><a href="/src/skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Overview/index.html">Skills</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/Quests/Overview/index.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>
  
      <li>
          <ul id="recentChanges">
              <h2>Recent Changes</h2>
-             <li><a href="skills/Combat/combat.html">Combat</a></li>
-             <li><a href="skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="skills/Questing/questing.html">Questing</a></li>
-             <li><a href="skills/Professions/professions.html">Professions</a></li>
-             <li><a href="skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/skills/Questing/questing.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>   
      <li> 
          <ul id="guides">
              <h2>Guides</h2>
-             <li><a href="skills/Combat/combat.html">Combat</a></li>
-             <li><a href="skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="skills/Questing/questing.html">Questing</a></li>
-             <li><a href="skills/Professions/professions.html">Professions</a></li>
-             <li><a href="skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/skills/Questing/questing.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>
  
      <li>
          <ul id="community">
              <h2>Community</h2>
-             <li><a href="skills/Combat/combat.html">Combat</a></li>
-             <li><a href="skills/Exploration/exploration.html">Exploration</a></li>
-             <li><a href="skills/Questing/questing.html">Questing</a></li>
-             <li><a href="skills/Professions/professions.html">Professions</a></li>
-             <li><a href="skills/Other/other.html">Other</a></li>
+             <li><a href="/skills/Combat/combat.html">Combat</a></li>
+             <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
+             <li><a href="/skills/Questing/questing.html">Questing</a></li>
+             <li><a href="/skills/Professions/professions.html">Professions</a></li>
+             <li><a href="/skills/Other/other.html">Other</a></li>
          </ul>
      </li>
  </ul>`;
@@ -72,7 +72,7 @@
  **********************************************************/
  document.querySelectorAll('.homeLink').forEach(item => {
     item.addEventListener('click', event => {
-        window.location.href = "/src/index.html";
+        window.location.href = "/index.html";
     })
   });
 
