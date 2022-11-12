@@ -4,6 +4,12 @@ A wiki page for a hypothetical MMO game.
 
 I intend on completely designing the alpha version of an MMO game using this website to experiment with using wikis as a form of documentation. Anyone wanting to contribute to the wiki with things they would like to see in a game of this type can feel free! this is a wiki after all.
 
+## If you want to help:
+I am looking for artists, writers and game designers at this point in time.
+Artists: skill icons.
+Writers: quests, characters, locations, lore etc.
+Game designers: game design stuff idk.
+
 ## Notes for myself
 
 ### Links
