@@ -2,7 +2,13 @@
 <a href="https://living-lore.web.app/">MMO_Wiki</a>
 A wiki page for a hypothetical MMO game.
 
-I intend on completely designing the alpha version of an MMO game using this website to experiment with using wikis as a form of documentation
+I intend on completely designing the alpha version of an MMO game using this website to experiment with using wikis as a form of documentation. Anyone wanting to contribute to the wiki with things they would like to see in a game of this type can feel free! this is a wiki after all.
+
+## If you want to help:
+I am looking for artists, writers and game designers at this point in time. <br><br>
+Artists: skill icons.<br>
+Writers: quests, characters, locations, lore etc.<br>
+Game designers: game design stuff idk.<br>
 
 ## Notes for myself
 
