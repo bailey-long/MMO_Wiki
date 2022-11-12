@@ -14,6 +14,7 @@
      <li>
          <ul id="navigation">
              <h2>Navigation</h2>
+             <li><a href="/index.html">Home</a></li>
              <li><a href="/skills/Overview/index.html">Skills</a></li>
              <li><a href="/skills/Combat/combat.html">Combat</a></li>
              <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
