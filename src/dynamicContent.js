@@ -2,13 +2,13 @@
  *  ANCHOR Insert header content
  ***********************************************************/
  document.getElementsByClassName("head")[0].innerHTML =
- `<h1 class="homeLink">MMO</h1>`
+ `<h1 class="homeLink">Wayfarers</h1>`
  
  /************************************************************
   * ANCHOR Insert side panel content  
   ***********************************************************/
  document.getElementsByClassName("panel")[0].innerHTML = 
- `<h1 class="homeLink">MMO</h1>
+ `<h2 class="homeLink">Wayfarers</h2>
  <!--List of lists for organization-->
  <ul id="listContainer">
      <li>
@@ -61,7 +61,7 @@
   * ANCHOR insert footer content
   *******************************************************/
  document.getElementsByClassName("footer")[0].innerHTML =
- `<h1 class="homeLink">MMO</h1>
+ `<h1 class="homeLink">Wayfarers</h1>
  <span>Website and MMO by <a href="https://bailey-long.github.io/src/index/" target="blank">Bailey Long</a></span>
  <span>Skill icon art by <a href="https://dtownshend.com/" target="blank">Dom Townshend</a></span>
  <span><a target="_blank" href="https://icons8.com/icon/102913/summer">Summer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
