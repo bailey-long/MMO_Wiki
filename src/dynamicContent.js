@@ -46,8 +46,8 @@
      </li>
  
      <li>
-         <ul id="community">
-             <h2>Community</h2>
+         <ul id="Popular">
+             <h2>Popular</h2>
              <li><a href="/skills/Combat/combat.html">Combat</a></li>
              <li><a href="/skills/Exploration/exploration.html">Exploration</a></li>
              <li><a href="/skills/Questing/questing.html">Questing</a></li>
