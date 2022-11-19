@@ -1,11 +1,15 @@
+/*************************************************************
+ * ANCHOR Dynamic Content
+ ************************************************************/
+
 /************************************************************
- *  ANCHOR Insert header content
+ * Insert header content
  ***********************************************************/
  document.getElementsByClassName("head")[0].innerHTML =
  `<h1 class="homeLink">Wayfarers</h1>`
  
  /************************************************************
-  * ANCHOR Insert side panel content  
+  * Insert side panel content  
   ***********************************************************/
  document.getElementsByClassName("panel")[0].innerHTML = 
  `<h2 class="homeLink">Wayfarers</h2>
@@ -58,7 +62,7 @@
  </ul>`;
  
  /********************************************************
-  * ANCHOR insert footer content
+  * insert footer content
   *******************************************************/
  document.getElementsByClassName("footer")[0].innerHTML =
  `<h1 class="homeLink">Wayfarers</h1>
