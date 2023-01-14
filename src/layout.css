@@ -4,19 +4,17 @@
     --contentBackground: antiquewhite;
     --exteriorBackground: wheat;
     --textColor: black;
-    --linkColor: blue;
-    --visitedLinkColor: purple;
+    --linkColor: purple;
     --footPanelLinkColor: blue;
 }
 @media (prefers-color-scheme: dark) {
     :root{
         /*Changes with theme*/
         --underline: red;
-        --contentBackground: #596e96;
+        --contentBackground: #42567a; /*#596e96*/
         --exteriorBackground: #303141;
         --textColor: white;
-        --linkColor: blue;
-        --visitedLinkColor: #292963;
+        --linkColor: #1e1e65;
         --footPanelLinkColor: steelblue;
     }
 }
@@ -47,9 +45,6 @@ a{
 }
 a:hover{
     text-decoration: underline;
-}
-a:visited{
-    color: var(--visitedLinkColor)
 }
 #listContainer a, .footer a{
     color: var(--footPanelLinkColor);
