@@ -78,11 +78,10 @@ a:hover{
 .head > *{
     margin: 0 10px;
 }
-
+/*side navigation panel*/
 .panel{
     width: 10%;
     height: 100%;
-    padding-bottom: 100%;
     margin-left: 10px;
     display: flex;
     flex-direction: column;
@@ -134,7 +133,7 @@ a:hover{
 }
 
 /**************************************
-* ANCHOR Hide side navigation on mobile
+* ANCHOR Responsive Design, hide navigation panels on small screens
 ***************************************/
 @media only screen and (max-width:1500px) {
     .panel{
