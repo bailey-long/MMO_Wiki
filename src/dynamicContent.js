@@ -6,7 +6,8 @@
  * Insert header content
  ***********************************************************/
  document.getElementsByClassName("head")[0].innerHTML =
- `<h1 class="homeLink">Wayfarers</h1>`
+ `<h1 class="homeLink">Wayfarers</h1>
+ <p>Log In</p> <p>Create account</p>`
  
  /************************************************************
   * Insert side panel content  
@@ -134,7 +135,7 @@ themeIMG.addEventListener("click", function(){
         document.documentElement.style.setProperty('--exteriorBackground', '#303141');
         document.documentElement.style.setProperty('--contentBackground', '#596e96');
         document.documentElement.style.setProperty('--underline', 'red');
-        document.documentElement.style.setProperty('--linkColor', 'blue');
+        document.documentElement.style.setProperty('--linkColor', '#1e1e65');
         document.documentElement.style.setProperty('--visitedLinkColor', '#292963');
         document.documentElement.style.setProperty('--footPanelLinkColor', 'steelblue');
         /*Body text color*/
