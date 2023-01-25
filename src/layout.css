@@ -23,8 +23,6 @@ body{
     background-color: var(--exteriorBackground);
     display: flex;
     flex-wrap: wrap;
-    /*Switching from light to dark mode transition*/
-    transition: 0.5s;
     color: var(--textColor);
 }
 h1, h2, h3{
@@ -100,8 +98,6 @@ a:hover{
 .content{
     width: 65%;
     padding-right: 1rem;
-    /*Switching from light to dark mode transition*/
-    transition: 0.5s;
     /*fill right side of screen with content*/
     flex: 1 1 auto;
     flex-shrink: inherit;

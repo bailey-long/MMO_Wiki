@@ -103,63 +103,120 @@ document.getElementsByTagName("head")[0].innerHTML;
 *   ANCHOR Append color theme switcher to pages
 ************************************************************/
 var themeIMG = document.createElement("img");
+themeIMG.id = "themeSwitcher";
 themeIMG.class = "colorTheme";
 themeIMG.alt = "Theme Switcher";
 themeIMG.tabIndex = "0";
 themeIMG.style.width = "30px";
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    themeIMG.src= "/Content/lightMode.png"
-    themeIMG.id = "lightMode";
-} else {
-    themeIMG.src= "/Content/darkMode.png"
-    themeIMG.id = "darkMode";
+//One time check for default browser color scheme
+if (localStorage.getItem("themeChosen") != "true"){
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+        localStorage.setItem("themeChosen", "true");
+        localStorage.setItem("theme", "darkMode");
+        themeIMG.src= "/Content/darkMode.png" // sun image
+    } else {
+        localStorage.setItem("themeChosen", "true");
+        localStorage.setItem("theme", "lightMode");
+        themeIMG.src= "/Content/lightMode.png" // moon image
+    }
 }
+
+if (localStorage.getItem("theme") == "lightMode"){
+    themeIMG.src= "/Content/lightMode.png" // moon image
+} else {
+    themeIMG.src= "/Content/darkMode.png" // sun image
+}
+
 document.getElementsByClassName("head")[0].appendChild(themeIMG);
 
+
 /************************************************************
-*   ANCHOR Change between light and dark mode
+*   ANCHOR Change between light and dark mode on click
 ************************************************************/
 themeIMG.addEventListener("click", function(){
-    if(themeIMG.id == "darkMode"){
+    if(localStorage.getItem("theme") == "lightMode"){
 
         /************************************************************
         *   Change to dark mode
         ************************************************************/
-
-        document.getElementById("darkMode").src = "/Content/lightMode.png";
-        //set theme selector to lightMode for next click
-        document.getElementById("darkMode").id = "lightMode";
-        //set cookie to lightMode
-        document.cookie = "lightMode";
-
+        themeIMG.src= "/Content/darkMode.png" // sun image
+        //set local storage to darkMode
+        localStorage.setItem("theme", "darkMode");
+        document.getElementsByClassName("content")[0].style.transition = "background-color 0.5s ease-in-out";
+        document.getElementsByTagName("body")[0].style.transition = "background-color 0.5s ease-in-out";
         document.documentElement.style.setProperty('--exteriorBackground', '#303141');
-        document.documentElement.style.setProperty('--contentBackground', '#596e96');
+        document.documentElement.style.setProperty('--contentBackground', '#42567a');
         document.documentElement.style.setProperty('--underline', 'red');
         document.documentElement.style.setProperty('--linkColor', '#1e1e65');
         document.documentElement.style.setProperty('--visitedLinkColor', '#292963');
         document.documentElement.style.setProperty('--footPanelLinkColor', 'steelblue');
-        /*Body text color*/
+        //Body text color
         document.body.style.color = "white";
+        // reset transition to none
+        document.getElementsByClassName("content")[0].removeAttribute("transition");
+        document.getElementsByTagName("body")[0].removeAttribute("transition");
         
     } else {
 
         /************************************************************
         *   Change to light mode
         ************************************************************/
-
-        document.getElementById("lightMode").src = "/Content/darkMode.png";
-        //set theme selector to darkMode for next click
-        document.getElementById("lightMode").id = "darkMode";
-        //set cookie to darkMode
-        document.cookie = "darkMode";
-
+        themeIMG.src= "/Content/lightMode.png" // moon image
+        //set local storage to lightMode
+        localStorage.setItem("theme", "lightMode");
+        document.getElementsByClassName("content")[0].style.transition = "background-color 0.5s ease-in-out";
+        document.getElementsByTagName("body")[0].style.transition = "background-color 0.5s ease-in-out";
         document.documentElement.style.setProperty('--exteriorBackground', 'wheat');
         document.documentElement.style.setProperty('--contentBackground', 'antiquewhite');
         document.documentElement.style.setProperty('--underline', 'brown');
         document.documentElement.style.setProperty('--linkColor', 'blue');
         document.documentElement.style.setProperty('--visitedLinkColor', 'purple');
         document.documentElement.style.setProperty('--footPanelLinkColor', 'blue');
-        /*Body text color*/
+        //Body text color
         document.body.style.color = "black";
+        // reset transition to none
+        document.getElementsByClassName("content")[0].removeAttribute("transition");
+        document.getElementsByTagName("body")[0].removeAttribute("transition");
     }   
 });
+
+/************************************************************
+*   ANCHOR Check on page load for local storage theme 
+    (same code as above, but without the click event and the local storage check is reversed)
+************************************************************/
+if(localStorage.getItem("theme") == "darkMode"){
+
+    /************************************************************
+    *   Change to dark mode
+    ************************************************************/
+    themeIMG.src= "/Content/darkMode.png" // sun image
+    //set local storage to darkMode
+    localStorage.setItem("theme", "darkMode");
+
+    document.documentElement.style.setProperty('--exteriorBackground', '#303141');
+    document.documentElement.style.setProperty('--contentBackground', '#42567a');
+    document.documentElement.style.setProperty('--underline', 'red');
+    document.documentElement.style.setProperty('--linkColor', '#1e1e65');
+    document.documentElement.style.setProperty('--visitedLinkColor', '#292963');
+    document.documentElement.style.setProperty('--footPanelLinkColor', 'steelblue');
+    /*Body text color*/
+    document.body.style.color = "white";
+    
+} else {
+
+    /************************************************************
+    *   Change to light mode
+    ************************************************************/
+    themeIMG.src= "/Content/lightMode.png" // moon image
+    //set local storage to lightMode
+    localStorage.setItem("theme", "lightMode");
+
+    document.documentElement.style.setProperty('--exteriorBackground', 'wheat');
+    document.documentElement.style.setProperty('--contentBackground', 'antiquewhite');
+    document.documentElement.style.setProperty('--underline', 'brown');
+    document.documentElement.style.setProperty('--linkColor', 'blue');
+    document.documentElement.style.setProperty('--visitedLinkColor', 'purple');
+    document.documentElement.style.setProperty('--footPanelLinkColor', 'blue');
+    /*Body text color*/
+    document.body.style.color = "black";
+}   
