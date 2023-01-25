@@ -99,8 +99,9 @@ document.getElementsByTagName("head")[0].innerHTML =
 <!-- Header font -->
 <link href="https://fonts.cdnfonts.com/css/diablo" rel="stylesheet">` + 
 document.getElementsByTagName("head")[0].innerHTML;
+
 /************************************************************
-*   ANCHOR Append color theme switcher to pages
+*   ANCHOR Append color theme switcher to pages and set initial theme
 ************************************************************/
 var themeIMG = document.createElement("img");
 themeIMG.id = "themeSwitcher";
@@ -134,6 +135,9 @@ document.getElementsByClassName("head")[0].appendChild(themeIMG);
 *   ANCHOR Change between light and dark mode on click
 ************************************************************/
 themeIMG.addEventListener("click", function(){
+    //set transition for elements
+    document.getElementsByClassName("content")[0].style.transition = "background-color 0.5s ease-in-out";
+    document.getElementsByTagName("body")[0].style.transition = "background-color 0.5s ease-in-out";
     if(localStorage.getItem("theme") == "lightMode"){
 
         /************************************************************
@@ -142,8 +146,6 @@ themeIMG.addEventListener("click", function(){
         themeIMG.src= "/Content/darkMode.png" // sun image
         //set local storage to darkMode
         localStorage.setItem("theme", "darkMode");
-        document.getElementsByClassName("content")[0].style.transition = "background-color 0.5s ease-in-out";
-        document.getElementsByTagName("body")[0].style.transition = "background-color 0.5s ease-in-out";
         document.documentElement.style.setProperty('--exteriorBackground', '#303141');
         document.documentElement.style.setProperty('--contentBackground', '#42567a');
         document.documentElement.style.setProperty('--underline', 'red');
@@ -152,9 +154,6 @@ themeIMG.addEventListener("click", function(){
         document.documentElement.style.setProperty('--footPanelLinkColor', 'steelblue');
         //Body text color
         document.body.style.color = "white";
-        // reset transition to none
-        document.getElementsByClassName("content")[0].removeAttribute("transition");
-        document.getElementsByTagName("body")[0].removeAttribute("transition");
         
     } else {
 
@@ -164,8 +163,6 @@ themeIMG.addEventListener("click", function(){
         themeIMG.src= "/Content/lightMode.png" // moon image
         //set local storage to lightMode
         localStorage.setItem("theme", "lightMode");
-        document.getElementsByClassName("content")[0].style.transition = "background-color 0.5s ease-in-out";
-        document.getElementsByTagName("body")[0].style.transition = "background-color 0.5s ease-in-out";
         document.documentElement.style.setProperty('--exteriorBackground', 'wheat');
         document.documentElement.style.setProperty('--contentBackground', 'antiquewhite');
         document.documentElement.style.setProperty('--underline', 'brown');
@@ -174,9 +171,6 @@ themeIMG.addEventListener("click", function(){
         document.documentElement.style.setProperty('--footPanelLinkColor', 'blue');
         //Body text color
         document.body.style.color = "black";
-        // reset transition to none
-        document.getElementsByClassName("content")[0].removeAttribute("transition");
-        document.getElementsByTagName("body")[0].removeAttribute("transition");
     }   
 });
 
@@ -192,7 +186,8 @@ if(localStorage.getItem("theme") == "darkMode"){
     themeIMG.src= "/Content/darkMode.png" // sun image
     //set local storage to darkMode
     localStorage.setItem("theme", "darkMode");
-
+    document.getElementsByClassName("content")[0].removeAttribute("transition");
+    document.getElementsByTagName("body")[0].removeAttribute("transition");
     document.documentElement.style.setProperty('--exteriorBackground', '#303141');
     document.documentElement.style.setProperty('--contentBackground', '#42567a');
     document.documentElement.style.setProperty('--underline', 'red');
@@ -210,7 +205,8 @@ if(localStorage.getItem("theme") == "darkMode"){
     themeIMG.src= "/Content/lightMode.png" // moon image
     //set local storage to lightMode
     localStorage.setItem("theme", "lightMode");
-
+    document.getElementsByClassName("content")[0].removeAttribute("transition");
+    document.getElementsByTagName("body")[0].removeAttribute("transition");
     document.documentElement.style.setProperty('--exteriorBackground', 'wheat');
     document.documentElement.style.setProperty('--contentBackground', 'antiquewhite');
     document.documentElement.style.setProperty('--underline', 'brown');
