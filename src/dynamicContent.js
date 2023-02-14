@@ -7,7 +7,7 @@
  ***********************************************************/
  document.getElementsByClassName("head")[0].innerHTML =
  `<h1 class="homeLink">Wayfarers</h1>
- <p>Log In</p> <p>Create account</p>`
+ <p>Log In</p> <a href="/registrationLogin/registration.html">Create account</a>`
  
  /************************************************************
   * Insert side panel content  
