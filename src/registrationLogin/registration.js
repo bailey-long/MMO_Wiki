@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 import { getFirestore, collection} from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -18,10 +19,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 //create a reference to the database
-const auth = firebase.auth();
+const auth = getAuth();
 const db = getFirestore();
 const colRef = collection(db, "user");
 
@@ -31,13 +32,13 @@ registrationForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     //get user info
-    const email = registrationForm['Email'].value;
-    const password = registrationForm['Password'].value;
+    const email = registrationForm['email'].value;
+    const password = registrationForm['password'].value;
 
     console.log(email, password);
 
     //sign up the user
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    createUserWithEmailAndPassword(auth, email, password).then(cred => {
         
     });
 });
