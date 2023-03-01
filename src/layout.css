@@ -5,6 +5,7 @@
     --exteriorBackground: wheat;
     --textColor: black;
     --linkColor: purple;
+    --registerLoginColor: purple;
     --footPanelLinkColor: blue;
 }
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
         --exteriorBackground: #303141;
         --textColor: white;
         --linkColor: #1e1e65;
+        --registerLoginColor: #5757e7;
         --footPanelLinkColor: steelblue;
     }
 }
@@ -53,6 +55,9 @@ a:hover{
 
 .homeLink{
     cursor: pointer;
+}
+.registerLogin{
+    color: var(--registerLoginColor)
 }
 
 .head img{ 
@@ -132,6 +137,9 @@ a:hover{
 * ANCHOR Responsive Design, hide navigation panels on small screens
 ***************************************/
 @media only screen and (max-width:1500px) {
+    .homeLink{
+        font-size: medium;
+    }
     .panel{
         width: 14%;
     }
