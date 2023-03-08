@@ -97,7 +97,7 @@ document.getElementsByTagName("head")[0].innerHTML =
   gtag('config', 'G-PB77QTDM8B');
 </script>
 <!-- Header font -->
-<link href="https://fonts.cdnfonts.com/css/diablo" rel="stylesheet">` + 
+<link rel="preload stylesheet" href="https://fonts.cdnfonts.com/css/diablo" as"font">` + 
 document.getElementsByTagName("head")[0].innerHTML;
 
 /************************************************************
